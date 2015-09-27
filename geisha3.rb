@@ -123,7 +123,7 @@ replace_config(routes_file, "/* append */", "$route['migrate/(:num)'] = 'migrate
 
 #DB
 database_file = "../application/config/database.php"
-replace_config(database_file, "'username' => ''", "'username' => '#{user_bd}';")
+replace_config(database_file, "'username' => ''", "'username' => '#{user_bd}'")
 replace_config(database_file, "'password' => ''", "'password' => '#{pass_bd}'")
 replace_config(database_file, "'database' => ''", "'database' => '#{nombre_bd}'")
 
