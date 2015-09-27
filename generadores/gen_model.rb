@@ -10,7 +10,7 @@ class #{@singular.capitalize} extends CI_Model{
 	//all
 	public function get_records($num,$start){
 		$this->db->select()->from('"+@plural+"')->order_by('id','ASC')->limit($num,$start);
-		return $this->db->get();
+		return $this->db->get()->result();
 
 	}
 
