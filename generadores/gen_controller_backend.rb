@@ -475,20 +475,29 @@ public function upload_file(){
 		$yukle->start_copy();
 		
 		
+
 		if($yukle->is_ok()){
-		\#$yukle->resize(600,0);
-		\#$yukle->set_thumbnail_name('tn_'.$random.'_'.$name_whitout_whitespaces);
-		\#$yukle->create_thumbnail();
-		\#$yukle->set_thumbnail_size(180, 0);
-		
-			//UPLOAD ok
-			$file['filename'] = $imagname;
-			$file['status'] = 1;
-		}
-		else{
-			$file['status'] = 0 ;
-			$file['msg'] = 'Error al subir archivo';
-		}
+
+                if(count($this->data['thumbnail_sizes'])){
+                    foreach ($this->data['thumbnail_sizes'] as $thumb_size) {
+                        //create thumbnail
+                        \#$yukle->resize(1000,0);
+                        \#$$yukle->set_thumbnail_name('tn_'.$thumb_size.'_'.$imagname);
+                        \#$$result_thumb = $yukle->create_thumbnail();
+                        \#$$yukle->set_thumbnail_size($thumb_size, 0);
+                    }
+                }
+
+                //UPLOAD ok
+                $file['filename'] = $imagname;
+                $file['status'] = 1;
+            }
+            else{
+                $file['status'] = 0 ;
+                $file['msg'] = 'Error al subir archivo';
+            }
+
+
 		
 		//clean
 		$yukle->set_tmp_name('');
