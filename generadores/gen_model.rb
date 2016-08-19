@@ -70,7 +70,7 @@ class #{@singular.capitalize} extends CI_Model{
 
 ?>"
 
-file_model = File.new("../application/models/"+@singular+".php", "w+")
+file_model = File.new("../application/models/"+@singular.capitalize+".php", "w+")
 if file_model
    file_model.syswrite(model)
 else

@@ -508,7 +508,7 @@ controller_file <<"
 ?>"
 
 
-file_controller_file = File.new("../application/controllers/control/#{@plural}.php", "w+")
+file_controller_file = File.new("../application/controllers/control/#{@plural.capitalize}.php", "w+")
 if file_controller_file
    file_controller_file.syswrite(controller_file)
 else
