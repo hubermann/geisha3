@@ -1,6 +1,6 @@
 controller_file = "<?php 
 
-class "+@plural+" extends CI_Controller{
+class "+@plural.capitalize+" extends CI_Controller{
 
 
 public function __construct(){
