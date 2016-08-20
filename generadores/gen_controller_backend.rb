@@ -302,9 +302,11 @@ public function delete(){
 			if(is_link($path)){
 				unlink($path);
 			}
+
+		$id_item = $this->uri->segment(4);
 		
 
-		$this->"+@singular+"->delete_record();
+		$this->"+@singular+"->delete_record($id_item);
 		redirect('control/"+@plural+"', 'refresh');
 		
 

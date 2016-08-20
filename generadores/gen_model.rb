@@ -48,9 +48,9 @@ class #{@singular.capitalize} extends CI_Model{
 		}
 
 		//destroy
-		public function delete_record(){
+		public function delete_record($id){
 
-			$this->db->where('id', $this->uri->segment(4));
+			$this->db->where('id', $id);
 			$this->db->delete('"+@plural+"');
 		}
 
