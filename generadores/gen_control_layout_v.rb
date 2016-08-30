@@ -143,6 +143,9 @@ file_control_layout = "<!DOCTYPE html>
         <script src=\"<?php echo base_url('public_folder/js/bootstrap.min.js'); ?>\"></script>
         <script src=\"<?php echo base_url('public_folder/js/main.js'); ?>\"></script>
 
+        <script src=\"<?php echo base_url('public_folder/js/bootbox.min.js'); ?>\"></script>
+        <script src=\"<?php echo base_url('public_folder/js/backend.js'); ?>\"></script>
+
         
         <script>
         window.setTimeout(function() { $(\".alert-success\").alert('close'); }, 6000);
